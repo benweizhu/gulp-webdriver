@@ -27,7 +27,9 @@
     "url": "https://github.com/webdriverio/gulp-webdriver/issues"
   },
   "scripts": {
-    "test": "./node_modules/.bin/gulp webdriver"
+    "test": "./node_modules/.bin/gulp webdriver",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "homepage": "https://github.com/webdriverio/gulp-webdriver",
   "dependencies": {
@@ -35,10 +37,12 @@
     "through2": "^0.6.5",
     "deepmerge": "^0.2.7",
     "dargs": "christian-bromann/dargs",
-    "webdriverio": "^3.2.1"
+    "webdriverio": "^4.7.0",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
     "mocha": "^2.3.0"
-  }
+  },
+  "snyk": true
 }
